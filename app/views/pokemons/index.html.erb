@@ -1,0 +1,13 @@
+<div class="row marketing">
+  <div class="col-lg-6">
+    <% @pokemons.each do |pokemon| %>
+      <h4><%= link_to 'Edit', edit_pokemon_path(pokemon) %></h4>
+      <h4><%= pokemon.name %>, Level <%= pokemon.level %></h4>
+      <p><%= pokemon.description %></p>
+      <p>Trainer: <%= pokemon.user.name %></p>
+    <% end %>
+  </div>
+</div>
+<div class="footer">
+  <p>&copy; Rails Decal 2014</p>
+</div>
