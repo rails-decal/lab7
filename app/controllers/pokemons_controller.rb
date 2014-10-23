@@ -1,4 +1,19 @@
 class PokemonsController < ApplicationController
+
+  def new
+    @pokemon = Pokemon.new
+  end
+
+  def create
+    @pokemon = Pokemon.new(pokemon_params)
+    if @pokemon.save
+      redirect_to pokemons_path
+    else
+      flash[:error] = @pokemon.errors.full_messages.to_sentence
+      render "new"
+    end
+  end
+
   def index
     @pokemons = Pokemon.all
   end

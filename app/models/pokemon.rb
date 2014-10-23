@@ -12,4 +12,7 @@
 
 class Pokemon < ActiveRecord::Base
   belongs_to :user
+
+  validates :name, :user_id, :level, presence: true
+  validates :name, uniqueness: true
 end
