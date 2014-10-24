@@ -1,5 +1,7 @@
 # Lab 7
 
+You can find [commands referenced in Lecture 7 here](https://docs.google.com/document/d/1SBjTup9o5XPnMngorulqlz-CfMLm1BBdmPFY45JnHrI).
+
 In this lab, you will extend the Pokemon app you created in [Lab 6](https://github.com/rails-decal/lab6).
 
 Start with ```git clone https://github.com/rails-decal/lab7.git```
