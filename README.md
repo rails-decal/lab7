@@ -8,7 +8,7 @@ Start with ```git clone https://github.com/rails-decal/lab7.git```
 
 1. Start by creating some fixtures. Fill in users.yml with 3 users, one with fixture name ```ash```, another ```misty```, and another ```brock```. The names should be ```Ash```, ```Misty```, ```Brock```. Set ```ash```'s number of badges to be 8. Set the other two to have 5 badges each. Set their ids to 1, 2, and 3 respectively.
 
-   Next fill in pokemons.yml with 50 pokemon using embedded ruby. Each pokemon's fixture name should be ```pokemon_1```, ```pokemon_2```, etc. while the respective names should be ```Pokemon 1```, ```Pokemon 2```, etc. Each pokemon should have a random level between 1 and 5 inclusive. The id of the n-th pokemon should be n+1 and its user_id should be n mod 3 + 1 (since we have 3 users that are 1-indexed, not 0-indexed). You don't need a description for the pokemon.
+   Next fill in pokemons.yml with 50 pokemon using embedded ruby. Each pokemon's fixture name should be ```pokemon_1```, ```pokemon_2```, etc. while the respective names should be ```Pokemon 1```, ```Pokemon 2```, etc. Each pokemon should have a random level between 1 and 5 inclusive. The id of the n-th pokemon should be n+1 and its user_id should be n % 3 + 1 (since we have 3 users that are 1-indexed, not 0-indexed). You don't need a description for the pokemon.
 
 2. Now run ```rake test:controllers```. You should be seeing two failures. Open up the test file where those failures occur. Understand what the tests are testing for, and then fix the controller methods in the controller file that is erroring.
 
